@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <style>
+      #show1 {
+        background: red;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        top: 1;
+        display: none;
+      }
+      .dis {
+        display: block !important;
+      }
+    </style>
+    <title>Chart Samp</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src=" https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>sd</h1>
+    <canvas id="myChart"></canvas>
+    <section id="show1">
+      Hello There
+      <div id="close">close</div>
+    </section>
+
+    <script>
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: "pie",
+
+        // The data for our dataset
+        data: {
+          labels: [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+          ],
+          datasets: [
+            {
+              label: "My First dataset",
+              backgroundColor: "rgb(255, 99, 132)",
+              borderColor: "rgb(255, 99, 132)",
+              data: [0, 10, 5, 2, 20, 30, 45],
+            },
+          ],
+        },
+
+        // Configuration options go here
+        options: {},
+      });
+    </script>
+  </body>
+</html>
